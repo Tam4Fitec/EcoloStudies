@@ -7,6 +7,7 @@ BigData 4 développement durable
 1°) cd EcoloStudies/
 
 2°) python3 SauvegardeHDFS.py
+
 3°) docker exec -it quickstart.cloudera hive -f /home/cloudera/script/tables.sql
 
 4°) docker exec -it quickstart.cloudera pig /home/cloudera/script/script_fill.pig -useHCatalog
