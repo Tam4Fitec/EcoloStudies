@@ -418,8 +418,8 @@ upload_file(fichier6_20Output, hdfs_path, fichier6_20Output)
 url6_60 = r'https://ec.europa.eu/eurostat/api/dissemination/sdmx/2.1/data/SDG_06_60/?format=sdmx_2.0_generic&compressed=true"'
 file6_60 = 'sdg_06_60.xml'
 download_file(url6_60, file6_60)
-fichier6_20Output = transformationXML(file6_60)
-upload_file(fichier6_20Output, hdfs_path, fichier6_20Output)
+fichier6_60Output = transformationXML(file6_60)
+upload_file(fichier6_60Output, hdfs_path, fichier6_60Output)
 
 url7_10 = r'https://ec.europa.eu/eurostat/api/dissemination/sdmx/2.1/data/SDG_07_10/?format=TSV&compressed=true"'
 file7_10 = 'sdg_07_10.tsv'
