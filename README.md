@@ -1,15 +1,21 @@
 # EcoloStudies
 BigData 4 développement durable
 
+Pré-requis : Permettre à l'utilisateur de lancer docker sans sudo
 
-0°) git clone https://github.com/Tam4Fitec/EcoloStudies.git
+git clone https://github.com/Tam4Fitec/EcoloStudies.git
 
-1°) cd EcoloStudies/
+cd EcoloStudies/
 
-2°) docker-compose up -d
+=> Lancer le script launchAll.sh (après lui avoir accorder les droits d'exécution)
+chmod +x launchAll.sh
 
-3°) python3 SauvegardeHDFS.py
+Il s'occupera de faire 
 
-4°) docker exec -it quickstart.cloudera hive -f /home/cloudera/script/tables.sql
+1°) Monter l'architecure : docker-compose up -d
 
-5°) docker exec -it quickstart.cloudera pig /home/cloudera/script/script_fill.pig -useHCatalog
+2°) Collect et dépots :  python3 SauvegardeHDFS.py
+
+3°) Database : docker exec -it quickstart.cloudera hive -f /home/cloudera/script/tables.sql
+
+4°) Ingestion : docker exec -it quickstart.cloudera pig /home/cloudera/script/script_fill.pig -useHCatalog
